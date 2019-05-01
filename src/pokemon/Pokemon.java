@@ -5,7 +5,8 @@ import items.Iitem;
 public class Pokemon {
 	private Type type1, type2;
 	private Iitem heldItem;
-	private int nature, level, id, exp;
+	private int level, id, exp;
+	private Nature nature;
 	private Stats baseStats, caculatedStats, EVs, IVs;
 	
 	public Stats calculateStats() throws Exception{
@@ -21,11 +22,11 @@ public class Pokemon {
 				newStats.setHealth(1);
 			}
 			//TODO: Implement nature
-			newStats.setDefence((((2*baseStats.getDefence()+IVs.getDefence()+(EVs.getDefence()/4)*level)/100)+5));
-			newStats.setAttack((((2*baseStats.getAttack()+IVs.getAttack()+(EVs.getAttack()/4)*level)/100)+5));
-			newStats.setSpeed((((2*baseStats.getSpeed()+IVs.getSpeed()+(EVs.getSpeed()/4)*level)/100)+5));
-			newStats.setSpecialAttack((((2*baseStats.getSpecialAttack()+IVs.getSpecialAttack()+(EVs.getSpecialAttack()/4)*level)/100)+5));
-			newStats.setSpecialDefence((((2*baseStats.getSpecialDefence()+IVs.getSpecialDefence()+(EVs.getSpecialDefence()/4)*level)/100)+5));
+			newStats.setDefense((int) Math.floor(  (((2*baseStats.getDefense()+IVs.getDefense()+(EVs.getDefense()/4)*level)/100)+5)*nature.getDefense()  ));
+			newStats.setAttack((int) Math.floor(   (((2*baseStats.getAttack()+IVs.getAttack()+(EVs.getAttack()/4)*level)/100)+5)*nature.getAttack()   ));
+			newStats.setSpeed((int) Math.floor(   (((2*baseStats.getSpeed()+IVs.getSpeed()+(EVs.getSpeed()/4)*level)/100)+5)*nature.getSpeed()   ));
+			newStats.setSpecialAttack((int) Math.floor(   (((2*baseStats.getSpecialAttack()+IVs.getSpecialAttack()+(EVs.getSpecialAttack()/4)*level)/100)+5)*nature.getSpecialAttack()   ));
+			newStats.setSpecialDefense((int) Math.floor(   (((2*baseStats.getSpecialDefense()+IVs.getSpecialDefense()+(EVs.getSpecialDefense()/4)*level)/100)+5)*nature.getSpecialDefense()   ));
 			
 			return newStats;
 			

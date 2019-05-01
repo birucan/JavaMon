@@ -1,18 +1,18 @@
 package pokemon;
 
 public class Stats {
-	private int health, speed, attack, defence, specialAttack, specialDefence;
+	private int health, speed, attack, defense, specialAttack, specialDefense;
 
 	
 	
-	public Stats(int health, int speed, int attack, int defence, int specialAttack, int specialDefence) {
+	public Stats(int health, int speed, int attack, int defense, int specialAttack, int specialDefence) {
 		super();
 		this.health = health;
 		this.speed = speed;
 		this.attack = attack;
-		this.defence = defence;
+		this.defense = defense;
 		this.specialAttack = specialAttack;
-		this.specialDefence = specialDefence;
+		this.specialDefense = specialDefense;
 	}
 
 	public int getHealth() {
@@ -39,12 +39,12 @@ public class Stats {
 		this.attack = attack;
 	}
 
-	public int getDefence() {
-		return defence;
+	public int getDefense() {
+		return defense;
 	}
 
-	public void setDefence(int defence) {
-		this.defence = defence;
+	public void setDefense(int defense) {
+		this.defense = defense;
 	}
 
 	public int getSpecialAttack() {
@@ -55,12 +55,12 @@ public class Stats {
 		this.specialAttack = specialAttack;
 	}
 
-	public int getSpecialDefence() {
-		return specialDefence;
+	public int getSpecialDefense() {
+		return specialDefense;
 	}
 
-	public void setSpecialDefence(int specialDefence) {
-		this.specialDefence = specialDefence;
+	public void setSpecialDefense(int specialDefense) {
+		this.specialDefense = specialDefense;
 	}
 	
 }
