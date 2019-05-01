@@ -5,7 +5,7 @@ public class Stats {
 
 	
 	
-	public Stats(int health, int speed, int attack, int defense, int specialAttack, int specialDefence) {
+	public Stats(int health, int speed, int attack, int defense, int specialAttack, int specialDefense) {
 		super();
 		this.health = health;
 		this.speed = speed;
